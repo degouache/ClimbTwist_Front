@@ -13,10 +13,15 @@ export class LoginComponent implements OnInit {
 
   onKeyUp(event: any) {
     const input = event.target;
+    const label = document.querySelector(`label[for=${input.id}]`);
     if (input.value.length > 0) {
-      input.classList.add('active');
+      if(label){
+        label.classList.add('active');
+      }
     } else {
-      input.classList.remove('active');
+      if(label){
+        label.classList.remove('active');
+      }
     }
   }
 }
