@@ -137,7 +137,7 @@ body {
     transition-delay: 0.15s;
   }
 
-  button {
+  .button {
     padding: 0.25em 0.20em;
     width: 13em;
     height: 4.2em;
@@ -147,7 +147,7 @@ body {
     font-size: 12px;
   }
   
-  button span {
+  .button span {
     position: relative;
     display: flex;
     justify-content: center;
@@ -163,14 +163,42 @@ body {
     box-shadow: 0 0.4em 0.1em 0.019em var(--background-alt);
   }
   
-  button span:hover {
+  .button span:hover {
     transition: all 0.5s;
     transform: translate(0, 0.4em);
     box-shadow: 0 0 0 0 var(--primary);
   }
   
-  button span:not(hover) {
+  .button span:not(hover) {
     transition: all 1s;
+  }
+
+  nav {
+    border-bottom: 1px solid #bbf246;
+  }
+
+  .button-nav {
+    padding: 0em 0em;
+    width: 4em;
+    height: 4em;
+    background-color: var(--background-alt);
+    border: 0.1em solid var(--primary);
+    border-radius: 0.3em;
+    font-size: 12px;
+  }
+  .navbar-toggler-icon{
+    background-image: url(./assets/SVG/presas_icon.svg);
+    width: 1.5em;
+    height: 2.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+    
+  @media (max-width: 768px) {
+    nav {
+      padding: 0.5rem 1rem;
+    }
   }
   
 
