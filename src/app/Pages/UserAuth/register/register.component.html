@@ -1,1 +1,81 @@
-<p>register works!</p>
+<section class="vh-100">
+  <div class="card col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 mx-auto mt-5">
+    <div class="card-body m-auto">
+      <h1 class="h1-white mb-5 mt-5">Registro</h1>
+      <div>
+        <div class="inputGroup form-group">
+          <input
+            (keyup)="onKeyUp($event)"
+            type="email"
+            formControlName="email"
+            id="email"
+            aria-describedby="email"
+            required=""
+            autocomplete="off"
+          />
+          <label for="email">Email</label>
+        </div>
+        <div class="inputGroup form-group">
+          <input
+            (keyup)="onKeyUp($event)"
+            type="text"
+            formControlName="userName"
+            id="userName"
+            aria-describedby="emuserNameail"
+            required=""
+            autocomplete="off"
+          />
+          <label for="userName">Nombre de usuario</label>
+        </div>
+        <div class="inputGroup form-group">
+          <input
+            (keyup)="onKeyUp($event)"
+            type="password"
+            formControlName="password"
+            id="password"
+            aria-describedby="password"
+            required=""
+            autocomplete="off"
+          />
+          <label for="password">Contraseña</label>
+        </div>
+        <div class="inputGroup form-group">
+          <input
+            (keyup)="onKeyUp($event)"
+            type="password"
+            formControlName="reppassword"
+            id="reppassword"
+            aria-describedby="reppassword"
+            required=""
+            autocomplete="off"
+          />
+          <label for="reppassword">Repite contraseña</label>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <input type="checkbox" id="cbx" style="display: none" />
+          <label for="cbx" class="check">
+            <svg width="28px" height="28px" viewBox="0 0 25 25">
+              <path
+                d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"
+              ></path>
+              <polyline points="1 9 7 14 15 4"></polyline>
+            </svg>
+          </label>
+          <p class="ms-2 mt-3 p-white">
+            Acepto las
+            <a class="small-bold" routerLink="#">condiciones legales</a>
+          </p>
+        </div>
+        <div class="text-center mt-2 mb-2">
+          <button type="submit" class="">
+            <span>Crear cuenta</span>
+          </button>
+        </div>
+        <p class="mb-5 small text-center">
+          ¿Ya tienes cuenta?
+          <a class="small-bold" routerLink="/login">Inicia sesión</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
