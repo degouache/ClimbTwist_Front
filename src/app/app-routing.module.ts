@@ -22,6 +22,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./Pages/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'picker',
+    loadChildren: () =>
+      import('./Pages/Game/picker/picker.module').then((m) => m.PickerModule),
+  },
+  {
+    path: 'game',
+    loadChildren: () =>
+      import('./Pages/Game/game/game.module').then((m) => m.GameModule),
+  },
 ];
 
 @NgModule({
