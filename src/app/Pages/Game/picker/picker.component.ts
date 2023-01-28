@@ -9,7 +9,7 @@ export class PickerComponent implements OnInit {
 
   selectedCircles: string[] = [];
   selected: number[] = [];
-  circleWords = ['rojo', 'rosa', 'morado', 'azul', 'verde', 'amarillo', 'gris', 'negro', 'naranja', 'azul claro'];
+  circleWords = ['rojo', 'rosa', 'morado', 'azul', 'verde', 'amarillo', 'gris', 'negro', 'naranja', 'comodín'];
 
   constructor() { }
 
