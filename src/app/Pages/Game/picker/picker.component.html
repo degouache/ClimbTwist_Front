@@ -1,1 +1,18 @@
-<p>picker works!</p>
+<app-nav-bar></app-nav-bar>
+<div class="d-flex justify-content-center mt-5">
+    <div class="circle mx-1 circle-0" (click)="selectCircles(0)" [ngClass]="{ selected: selected.indexOf(0) != -1 }"></div>
+    <div class="circle mx-1 circle-1" (click)="selectCircles(1)" [ngClass]="{ selected: selected.indexOf(1) != -1 }"></div>
+    <div class="circle mx-1 circle-2" (click)="selectCircles(2)" [ngClass]="{ selected: selected.indexOf(2) != -1 }"></div>
+    <div class="circle mx-1 circle-3" (click)="selectCircles(3)" [ngClass]="{ selected: selected.indexOf(3) != -1 }"></div>
+    <div class="circle mx-1 circle-4" (click)="selectCircles(4)" [ngClass]="{ selected: selected.indexOf(4) != -1 }"></div>
+  </div>
+  <div class="d-flex justify-content-center mb-5">
+    <div class="circle mx-1 circle-5" (click)="selectCircles(5)" [ngClass]="{ selected: selected.indexOf(5) != -1 }"></div>
+    <div class="circle mx-1 circle-6" (click)="selectCircles(6)" [ngClass]="{ selected: selected.indexOf(6) != -1 }"></div>
+    <div class="circle mx-1 circle-7" (click)="selectCircles(7)" [ngClass]="{ selected: selected.indexOf(7) != -1 }"></div>
+    <div class="circle mx-1 circle-8" (click)="selectCircles(8)" [ngClass]="{ selected: selected.indexOf(8) != -1 }"></div>
+    <div class="circle mx-1 circle-9" (click)="selectCircles(9)" [ngClass]="{ selected: selected.indexOf(9) != -1 }"></div>
+  </div>
+  <div class ="small-bold text-center" *ngFor="let selected of selectedCircles">
+    {{selected}}
+  </div>
