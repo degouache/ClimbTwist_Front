@@ -1,230 +1,319 @@
 :root {
-    --white: #fff;
-    --black: #2e2e2e;
-    --background: #192126;
-    --background-light: #384046;
-    --background-alt: #212a2c;
-    --primary-brand: #9ee010;
-    --primary: #bbf246;
-    --details: #839bae;
-  }
+  --white: #fff;
+  --black: #2e2e2e;
+  --background: #192126;
+  --background-light: #384046;
+  --background-alt: #212a2c;
+  --primary-brand: #9ee010;
+  --primary: #bbf246;
+  --details: #839bae;
+}
 body {
-    background-color: var(--background);
+  background-color: var(--background);
 }
 
-  .inputGroup {
-    margin: 1em 0 1em 0;
-    max-width: 300px;
-    position: relative;
-  }
-  
-  .inputGroup input {
-    font-size: 100%;
-    padding: 0.8em;
-    outline: none;
-    border: 2px solid var(--details);
-    background-color: transparent;
-    border-radius: 20px;
-    width: 100%;
-    color: var(--white);
-  }
-  
-  .inputGroup label {
-    font-size: 100%;
-    position: absolute;
-    left: 0;
-    padding: 0.8em;
-    margin-left: 0.5em;
-    pointer-events: none;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    color: var(--white);
-  }
-  
-  .inputGroup :is(input:focus, input:valid)~label {
-    -webkit-transform: translateY(-50%) scale(.9);
-        -ms-transform: translateY(-50%) scale(.9);
-            transform: translateY(-50%) scale(.9);
-    margin: 0em;
-    margin-left: 1.3em;
-    padding: 0.4em;
-    background-color: var(--background-light);
-  }
-  
-  .inputGroup :is(input:focus, input:valid) {
-    border-color: var(--primary);
-  }
-  .inputGroup label.active{
-    -webkit-transform: translateY(-50%) scale(.9);
-        -ms-transform: translateY(-50%) scale(.9);
-            transform: translateY(-50%) scale(.9);
-    margin: 0em;
-    margin-left: 1.3em;
-    padding: 0.4em;
-    background-color: var(--background-light);
+.inputGroup {
+  margin: 1em 0 1em 0;
+  max-width: 300px;
+  position: relative;
 }
 
-  .card{
-    background-color: var(--background-light);
-    border: var(--primary-brand) 1px solid;
-  }
-  
-  .check {
-    cursor: pointer;
-    position: relative;
-    margin: auto;
-    width: 18px;
-    height: 18px;
-    -webkit-tap-highlight-color: transparent;
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .check:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #384046;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-  
-  .check svg {
-    position: relative;
-    z-index: 1;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: var(--details);
-    stroke-width: 1.5;
-    transform: translate3d(0, 0, 0);
-    transition: all 0.2s ease;
-  }
-  
-  .check svg path {
-    stroke-dasharray: 60;
-    stroke-dashoffset: 0;
-  }
-  
-  .check svg polyline {
-    stroke-dasharray: 22;
-    stroke-dashoffset: 66;
-  }
-  
-  .check:hover:before {
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid var(--details);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+  color: var(--white);
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: var(--white);
+}
+
+.inputGroup :is(input:focus, input:valid) ~ label {
+  -webkit-transform: translateY(-50%) scale(0.9);
+  -ms-transform: translateY(-50%) scale(0.9);
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: var(--background-light);
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: var(--primary);
+}
+.inputGroup label.active {
+  -webkit-transform: translateY(-50%) scale(0.9);
+  -ms-transform: translateY(-50%) scale(0.9);
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: var(--background-light);
+}
+
+.card {
+  background-color: var(--background-light);
+  border: var(--primary-brand) 1px solid;
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #384046;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--details);
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 1;
+}
+
+.check:hover svg {
+  stroke: var(--primary);
+}
+
+#cbx:checked + .check svg {
+  stroke: var(--primary);
+}
+
+#cbx:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+.button {
+  padding: 0.25em 0.2em;
+  width: 13em;
+  height: 4.2em;
+  background-color: var(--background-alt);
+  border: 0.08em solid var(--primary);
+  border-radius: 0.3em;
+  font-size: 12px;
+}
+
+.button span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: var(--background);
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: var(--white);
+  border: 0.08em solid var(--details);
+  box-shadow: 0 0.4em 0.1em 0.019em var(--background-alt);
+}
+
+.button span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 var(--primary);
+}
+
+.button span:not(hover) {
+  transition: all 1s;
+}
+
+nav {
+  border-bottom: 1px solid #bbf246;
+}
+
+.button-nav {
+  width: 4em;
+  height: 4em;
+  background-color: var(--background-alt);
+  border: 0.1em solid var(--primary);
+  border-radius: 0.3em;
+  font-size: 12px;
+}
+.navbar-toggler-icon {
+  background-image: url(./assets/SVG/presas_icon.svg);
+  width: 1.5em;
+  height: 2.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.btn-presa-lat {
+  width: 8em;
+  height: 8em;
+  background-color: var(--background-alt);
+  color: var(--white);
+  border: 0.2em solid var(--primary);
+  border-radius: 30% 70% 20% 40%;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  color: var(--white);
+  font-size: 1rem;
+}
+.btn-presa-lat::after {
+  border-radius: 30% 70% 20% 40%;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  content: "";
+  border: 0.3em solid var(--primary);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+.btn-presa-lat:hover, .btn-presa-lat:focus {
+  color: var(--primary);
+  border: 0.3em solid var(--primary);
+  font-weight: 700;
+  transform: translateY(-1em);
+  font-size: 1.2rem;
+  border-radius: 71% 29% 35% 65% / 63% 73% 27% 37%;
+}
+.btn-presa-lat:hover::after, .btn-presa-lat:focus::after {
+  animation: little 1.5s infinite;
+  border-radius: 71% 29% 35% 65% / 63% 73% 27% 37%;
+}
+.btn-presa {
+  width: 8em;
+  height: 8em;
+  background-color: var(--background-alt);
+  color: var(--white);
+  border: 0.2em solid var(--primary);
+  border-radius: 30% 70% 20% 40%;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.btn-presa:hover, .btn-presa:focus {
+  transform: translateY(-1em);
+  color: var(--primary);
+  border: 0.3em solid var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 71% 29% 35% 65% / 63% 73% 27% 37%;
+}
+
+@keyframes ring {
+  0% {
+    width: 1em;
+    height: 1em;
     opacity: 1;
   }
-  
-  .check:hover svg {
-    stroke: var(--primary);
+  100% {
+    width: 18em;
+    height: 18em;
+    opacity: 0;
   }
-  
-  #cbx:checked + .check svg {
-    stroke: var(--primary);
+}
+@keyframes little {
+  0% {
+    width: 1em;
+    height: 1em;
+    opacity: 1;
   }
-  
-  #cbx:checked + .check svg path {
-    stroke-dashoffset: 60;
-    transition: all 0.3s linear;
+  100% {
+    width: 8em;
+    height: 8em;
+    opacity: 0;
   }
-  
-  #cbx:checked + .check svg polyline {
-    stroke-dashoffset: 42;
-    transition: all 0.2s linear;
-    transition-delay: 0.15s;
-  }
+}
 
-  .button {
-    padding: 0.25em 0.20em;
-    width: 13em;
-    height: 4.2em;
-    background-color: var(--background-alt);
-    border: 0.08em solid var(--primary);
-    border-radius: 0.3em;
-    font-size: 12px;
-  }
-  
-  .button span {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0.4em;
-    width: 8.25em;
-    height: 2.5em;
-    background-color: var(--background);
-    border-radius: 0.2em;
-    font-size: 1.5em;
-    color: var(--white);
-    border: 0.08em solid var(--details);
-    box-shadow: 0 0.4em 0.1em 0.019em var(--background-alt);
-  }
-  
-  .button span:hover {
-    transition: all 0.5s;
-    transform: translate(0, 0.4em);
-    box-shadow: 0 0 0 0 var(--primary);
-  }
-  
-  .button span:not(hover) {
-    transition: all 1s;
-  }
-
+@media (max-width: 768px) {
   nav {
-    border-bottom: 1px solid #bbf246;
+    padding: 0.5rem 1rem;
   }
+}
 
-  .button-nav {
-    padding: 0em 0em;
-    width: 4em;
-    height: 4em;
-    background-color: var(--background-alt);
-    border: 0.1em solid var(--primary);
-    border-radius: 0.3em;
-    font-size: 12px;
-  }
-  .navbar-toggler-icon{
-    background-image: url(./assets/SVG/presas_icon.svg);
-    width: 1.5em;
-    height: 2.5em;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
-    
-  @media (max-width: 768px) {
-    nav {
-      padding: 0.5rem 1rem;
-    }
-  }
-  
+/*textos*/
 
-  /*textos*/
-
-  .h1-white{
-    color: var(--white);
-    font-size: 3.5rem;
-  }
-  .p-white{
-    color: var(--white);
-  }
-  .h6-white{
-    color: var(--white);
-  }
-  .small{
-    color: var(--white);
-  }
-  .small-bold{
-    color: var(--white);
-    text-decoration: underline var(--white) 2px;
-    font-weight: 700;
-  }
-  .small-bold:hover{
-    color: var(--primary);
-    text-decoration: underline var(--primary) 2px;
-    font-weight: 700;
-  }
-  
+.h1-white {
+  color: var(--white);
+  font-size: 3.5rem;
+}
+.p-white {
+  color: var(--white);
+}
+.h6-white {
+  color: var(--white);
+}
+.small {
+  color: var(--white);
+}
+.small-bold {
+  color: var(--white);
+  text-decoration: underline var(--white) 2px;
+  font-weight: 700;
+}
+.small-bold:hover {
+  color: var(--primary);
+  text-decoration: underline var(--primary) 2px;
+  font-weight: 700;
+}
